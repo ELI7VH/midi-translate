@@ -11,5 +11,8 @@
   "devDependencies": {
     "mocha": "^6.2.1",
     "nodemon": "^1.19.3"
+  },
+  "dependencies": {
+    "nyc": "^14.1.1"
   }
 }
