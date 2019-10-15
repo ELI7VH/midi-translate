@@ -1,25 +1,25 @@
 const assert = require('assert')
 const { noteToString, stringToNote } = require('../src/index')
 
-describe('noteToString()',() => {
+describe('noteToString()', () => {
   it('returns c-1 from 0', () => {
-    assert.equal(noteToString(0),'c-1')
+    assert.equal(noteToString(0), 'c-1')
   })
-  
-  it('returns a0 from 21', () => {  
-    assert.equal(noteToString(21),'a0')
+
+  it('returns a0 from 21', () => {
+    assert.equal(noteToString(21), 'a0')
   })
-  
-  it('returns f#2 from 42', () => {  
-    assert.equal(noteToString(42),'f#2')
+
+  it('returns f#2 from 42', () => {
+    assert.equal(noteToString(42), 'f#2')
   })
-  
-  it('returns a#7 from 106', () => {  
-    assert.equal(noteToString(106),'a#7')
+
+  it('returns a#7 from 106', () => {
+    assert.equal(noteToString(106), 'a#7')
   })
 })
 
-describe('stringToNote()',() => {
+describe('stringToNote()', () => {
   it('returns 106 from a#7', () => {
     assert.equal(noteToString('a#7'), 106)
   })
