@@ -1,6 +1,6 @@
 {
   "name": "midi-translate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a library to help translate from midi notes to things and back again!",
   "main": "index.js",
   "scripts": {
