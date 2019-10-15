@@ -21,15 +21,15 @@ describe('noteToString()', () => {
 
 describe('stringToNote()', () => {
   it('returns 106 from a#7', () => {
-    assert.equal(noteToString('a#7'), 106)
+    assert.equal(stringToNote('a#7'), 106)
   })
   it('returns 42 from f#2', () => {
-    assert.equal(noteToString('f#2'), 42)
+    assert.equal(stringToNote('f#2'), 42)
   })
   it('returns 21 from a0', () => {
-    assert.equal(noteToString('a0'), 21)
+    assert.equal(stringToNote('a0'), 21)
   })
   it('returns 0 from c-1', () => {
-    assert.equal(noteToString('c-1'), 0)
+    assert.equal(stringToNote('c-1'), 0)
   })
 })
