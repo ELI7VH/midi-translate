@@ -1,5 +1,5 @@
 const assert = require('assert')
-const { noteToString, stringToNote } = require('../src/index')
+const { noteToString, stringToNote, noteToFrequency } = require('../src/index')
 
 describe('noteToString()', () => {
   it('returns c-1 from 0', () => {
@@ -33,3 +33,28 @@ describe('stringToNote()', () => {
     assert.equal(stringToNote('c-1'), 0)
   })
 })
+
+describe('noteToFrequency', () => {
+  it('returns 27.500 from 21', () => {
+    assert.equal(noteToFrequency(21), 27.5)
+  })
+  it('returns 55.000 from 33', () => {
+    assert.equal(noteToFrequency(33), 55)
+  })
+  it('returns 110.000 from 45', () => {
+    assert.equal(noteToFrequency(45), 110)
+  })
+  it('returns 220.000 from 57', () => {
+    assert.equal(noteToFrequency(57), 220)
+  })
+  it('returns 440.000 from 69', () => {
+    assert.equal(noteToFrequency(69), 440)
+  })
+  it('returns 880.000 from 81', () => {
+    assert.equal(noteToFrequency(81), 880)
+  })
+  it('returns 1760.000 from 93', () => {
+    assert.equal(noteToFrequency(93), 1760)
+  })
+})
+
