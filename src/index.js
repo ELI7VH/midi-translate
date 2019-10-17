@@ -8,15 +8,31 @@ const noteToString = noteNumber => {
 }
 
 const stringToNote = noteString => {
+  for (let i in notes) {
+    if (noteString.includes(notes[i])) {
+      let note = parseInt(i)
+      let octave
+
+      const parsedRemainder = noteString.split(notes[i])[1]
+
+      if (parsedRemainder.includes('#')) {
+        octave = parseInt(parsedRemainder.split('#')[1])
+        note += 1
+      } else {
+        octave = parseInt(parsedRemainder)
+      }
+
+      return note + 12 * octave + 12
+    }
+  }
   return -1
 }
 
 const noteToFrequency = noteNumber => {
   const a4hz = tuning
   const a4midi = 69
-  
-  return 2**((noteNumber-a4midi) / 12)*440
 
+  return 2 ** ((noteNumber - a4midi) / 12) * 440
 }
 
 module.exports = { noteToString, stringToNote, noteToFrequency }
