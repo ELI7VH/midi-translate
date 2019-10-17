@@ -32,8 +32,8 @@ translate midi between different thingies - primarily for my personal use with t
 Use:
 
 ```js
-import { noteToString } from 'midi-translate'
+import { noteToString, noteToFrequency } from 'midi-translate'
 let incomingNote = Midi.getNote('port1') // however you get midi notes, do that
-let stringNote = noteNumberToString(incomingNote)
-let noteFrequency = noteNumberToFrequency(incomingNote)
+let stringNote = noteToString(incomingNote)
+let noteFrequency = noteToFrequency(incomingNote)
 ```
